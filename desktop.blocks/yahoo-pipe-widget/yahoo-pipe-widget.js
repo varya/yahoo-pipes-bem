@@ -2,6 +2,9 @@
 
 (function(){
 
+    /**
+     * A widget with yahoo pipes
+     */
 BEM.DOM.decl('yahoo-pipe-widget', {
 
     onSetMod : {
@@ -11,6 +14,13 @@ BEM.DOM.decl('yahoo-pipe-widget', {
             }
         }
     }
+
+}, {
+
+    /**
+     * With no "live" section in the static methods
+     * all the components are inited on domReady
+     */
 
 });
 
