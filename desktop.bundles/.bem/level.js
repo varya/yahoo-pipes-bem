@@ -13,6 +13,10 @@ exports.getConfig = function() {
             ]
             .map(function(path) { return PATH.resolve(environ.LIB_ROOT, path); })
             .concat([
+                'ya-blocks'
+            ])
+            .map(function(path) { return PATH.resolve(environ.PRJ_ROOT, path); })
+            .concat([
                 'common.blocks',
                 'desktop.blocks'
             ]
