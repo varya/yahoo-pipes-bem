@@ -10,7 +10,25 @@ BEM.DOM.decl('yahoo-pipe-widget', {
     onSetMod : {
         'js' : {
             'inited' : function() {
-                console.log('I am inited');
+
+                /**
+                 * "i-request_type_ajax" is a dataprovider component for
+                 * cross-domain (JSONP) requests
+                 */
+                this._dataProvider = BEM.create('i-request_type_ajax', {
+                    url: 'http://pipes.yahoo.com/pipes/pipe.run',
+                    callbackCtx: this,
+                    jsonp: '_callback'
+                });
+                this._dataProvider.get(
+                    {
+                        _id : this.params.pipeId,
+                        _render: 'json'
+                    },
+                    function() {
+                        console.log(arguments);
+                    }
+                )
             }
         }
     }
