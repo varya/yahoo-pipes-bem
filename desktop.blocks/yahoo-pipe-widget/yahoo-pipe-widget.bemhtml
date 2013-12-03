@@ -1,0 +1,5 @@
+block yahoo-pipe-widget {
+
+    js: true
+
+}
