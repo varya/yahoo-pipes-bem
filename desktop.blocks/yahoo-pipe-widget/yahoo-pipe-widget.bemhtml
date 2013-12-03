@@ -1,5 +1,7 @@
 block yahoo-pipe-widget {
 
-    js: true
+    js: {
+        pipeId: this.ctx.pipeId
+    }
 
 }
