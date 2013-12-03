@@ -2,6 +2,31 @@
 
 (function(){
 
+var urlParser = function(url) {
+    var parser = document.createElement('a');
+    parser.href = url;
+    return parser;
+}
+
+var imageUrl = function(host, image) {
+    if (!image) return;
+
+    host = urlParser(host);
+    image = urlParser(image);
+
+    var res = [
+        host.protocol,
+        '//',
+        host.host
+    ]
+    if (image.pathname.indexOf('/') != 0) {
+        res.push(host.pathname);
+    }
+    res.push(image.pathname);
+
+    return res.join('');
+}
+
     /**
      * A widget with yahoo pipes
      */
@@ -25,8 +50,19 @@ BEM.DOM.decl('yahoo-pipe-widget', {
                         _id : this.params.pipeId,
                         _render: 'json'
                     },
-                    function() {
-                        console.log(arguments);
+                    function(data) {
+                        var list = [],
+                            items = data.value.items;
+                        for (var i=0;i<10;i++){
+                            var item = items[i];
+                            list.push({
+                                title: item.title,
+                                description: item.description,
+                                image: imageUrl(item.link, item.content),
+                                link: item.link
+                            });
+                        }
+                        console.log(list);
                     }
                 )
             }
