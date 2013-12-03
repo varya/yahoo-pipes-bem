@@ -62,11 +62,27 @@ BEM.DOM.decl('yahoo-pipe-widget', {
                                 link: item.link
                             });
                         }
-                        console.log(list);
+                        this.createList(list);
                     }
                 )
             }
         }
+    },
+    createList: function(list){
+        var listBlocks = $.map(list, function(item){
+            return {
+                block: 'yahoo-pipe-widget',
+                elem: 'item',
+                content: [
+                    {
+                        elem: 'title',
+                        content: item.title
+                    }
+                ]
+            }
+        });
+        BEM.DOM.append(this.domElem, BEMHTML.apply(listBlocks));
+        console.log('list', list, listBlocks);
     }
 
 }, {
