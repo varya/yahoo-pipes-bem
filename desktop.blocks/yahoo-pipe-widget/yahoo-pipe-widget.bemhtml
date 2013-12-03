@@ -1,7 +1,21 @@
 block yahoo-pipe-widget {
 
+    tag: 'ul'
+
     js: {
         pipeId: this.ctx.pipeId
+    }
+
+    elem item {
+
+        tag: 'li'
+
+    }
+
+    elem title {
+
+        tag: 'h3'
+
     }
 
 }
