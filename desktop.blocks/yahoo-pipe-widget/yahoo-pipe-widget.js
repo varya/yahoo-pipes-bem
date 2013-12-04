@@ -75,12 +75,12 @@ BEM.DOM.decl('yahoo-pipe-widget', {
                 elem: 'item',
                 content: [
                     {
-                        elem: 'title',
-                        content: item.title
-                    },
-                    {
                         elem: 'pic',
                         url: item.image
+                    },
+                    {
+                        elem: 'title',
+                        content: item.title
                     },
                     {
                         elem: 'desc',

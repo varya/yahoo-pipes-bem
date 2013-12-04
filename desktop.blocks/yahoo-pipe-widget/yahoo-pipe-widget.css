@@ -1,8 +1,33 @@
 .yahoo-pipe-widget
 {
-    background: red;
-    width: 100px;
-    height: 100px;
+    width: 300px;
+    font: 400 14px/1.5 Helvetica, Verdana, sans-serif;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    border: 1px solid #ccc;
+}
+
+.yahoo-pipe-widget__item
+{
+    border-bottom: 1px solid #ccc;
+    padding: 0.5em;
+}
+
+.yahoo-pipe-widget__item:last-child
+{
+    border:none;
+}
+
+.yahoo-pipe-widget__item:hover
+{
+    background: #EEE;
+}
+
+.yahoo-pipe-widget__title
+{
+    margin: 0;
+    padding: 0;
 }
 
 .yahoo-pipe-widget__desc
@@ -13,4 +38,21 @@
 .yahoo-pipe-widget__item_opened_true
 .yahoo-pipe-widget__desc {
     display: block;
+}
+
+.yahoo-pipe-widget__link
+{
+    display: block;
+    background: green;
+    color: #FFF;
+    background-color: #a9db80;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#a9db80), to(#96c56f));
+    background-image: -webkit-linear-gradient(top, #a9db80, #96c56f);
+    background-image: -moz-linear-gradient(top, #a9db80, #96c56f);
+    background-image: -ms-linear-gradient(top, #a9db80, #96c56f);
+    background-image: -o-linear-gradient(top, #a9db80, #96c56f);
+    background-image: linear-gradient(to bottom, #a9db80, #96c56f);
+    border-radius: 1em;
+    text-decoration: none;
+    padding: 0.5em 1em;
 }
