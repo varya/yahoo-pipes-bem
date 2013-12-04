@@ -4,3 +4,8 @@
     width: 100px;
     height: 100px;
 }
+
+.yahoo-pipe-widget__desc_hidden_true
+{
+    display: none;
+}
