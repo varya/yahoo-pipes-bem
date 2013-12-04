@@ -1,0 +1,130 @@
+/* ../../desktop.blocks/yahoo-pipe-widget/yahoo-pipe-widget.css begin */
+.yahoo-pipe-widget
+{
+    width: 300px;
+    font: 400 14px/1.5 Helvetica, Verdana, sans-serif;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    border: 1px solid #ccc;
+}
+
+.yahoo-pipe-widget_status_loading
+{
+    text-align: center;
+}
+
+.yahoo-pipe-widget_status_loading .yahoo-pipe-widget__loader
+{
+    display: inline-block;
+}
+
+.yahoo-pipe-widget__loader
+{
+    display: none;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    background: rgba(0,0,0, 0.15);
+    position: relative;
+    overflow: hidden;
+    margin: 1em auto;
+}
+
+.yahoo-pipe-widget__loader-i
+{
+    position: absolute;
+    background: rgba(0,0,0, 0.1);
+    width: 100px;
+    height: 100px;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+}
+.yahoo-pipe-widget__loader-i:nth-child(1)
+{
+    -webkit-animation: growDot 1s alternate 0s infinite;
+}
+.yahoo-pipe-widget__loader-i:nth-child(2)
+{
+    -webkit-animation: growDot 1s alternate 0.2s infinite;
+}
+.yahoo-pipe-widget__loader-i:nth-child(3)
+{
+    -webkit-animation: growDot 1s alternate 0.4s infinite;
+}
+
+@-webkit-keyframes growDot {
+  0% { -webkit-transform: scale(0); z-index: 5; }
+  100% { -webkit-transform: scale(1); z-index: 2; }
+}
+
+.yahoo-pipe-widget__error
+{
+    display: none;
+    font-weight: 700;
+    color: red;
+    padding: 1em;
+}
+
+.yahoo-pipe-widget_status_error .yahoo-pipe-widget__error
+{
+    display: block;
+}
+
+.yahoo-pipe-widget__item
+{
+    border-bottom: 1px solid #ccc;
+    padding: 0.5em;
+    cursor: pointer;
+}
+
+.yahoo-pipe-widget__item:last-child
+{
+    border:none;
+}
+
+.yahoo-pipe-widget__item:hover
+{
+    background: #EEE;
+}
+
+.yahoo-pipe-widget__title
+{
+    margin: 0;
+    padding: 0;
+}
+
+.yahoo-pipe-widget__desc
+{
+    display: none;
+    position: relative;
+    padding-bottom: 3em;
+}
+
+.yahoo-pipe-widget__item_opened_true
+.yahoo-pipe-widget__desc {
+    display: block;
+}
+
+.yahoo-pipe-widget__link
+{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: inline-block;
+    background: green;
+    color: #FFF;
+    background-color: #a9db80;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#a9db80), to(#96c56f));
+    background-image: -webkit-linear-gradient(top, #a9db80, #96c56f);
+    background-image: -moz-linear-gradient(top, #a9db80, #96c56f);
+    background-image: -ms-linear-gradient(top, #a9db80, #96c56f);
+    background-image: -o-linear-gradient(top, #a9db80, #96c56f);
+    background-image: linear-gradient(to bottom, #a9db80, #96c56f);
+    border-radius: 1em;
+    text-decoration: none;
+    padding: 0.5em 1em;
+}
+
+/* ../../desktop.blocks/yahoo-pipe-widget/yahoo-pipe-widget.css end */
