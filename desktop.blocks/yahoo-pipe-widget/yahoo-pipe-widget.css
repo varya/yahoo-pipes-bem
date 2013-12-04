@@ -5,7 +5,12 @@
     height: 100px;
 }
 
-.yahoo-pipe-widget__desc_hidden_true
+.yahoo-pipe-widget__desc
 {
     display: none;
+}
+
+.yahoo-pipe-widget__item_opened_true
+.yahoo-pipe-widget__desc {
+    display: block;
 }

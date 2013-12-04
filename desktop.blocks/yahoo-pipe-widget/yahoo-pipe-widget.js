@@ -70,7 +70,6 @@ BEM.DOM.decl('yahoo-pipe-widget', {
     },
     createList: function(list){
         var listBlocks = $.map(list, function(item){
-            console.log(item.desc);
             return {
                 block: 'yahoo-pipe-widget',
                 elem: 'item',
@@ -81,7 +80,6 @@ BEM.DOM.decl('yahoo-pipe-widget', {
                     },
                     {
                         elem: 'desc',
-                        mods: { hidden: true },
                         content: [
                             item.desc,
                             {
@@ -96,7 +94,7 @@ BEM.DOM.decl('yahoo-pipe-widget', {
         BEM.DOM.append(this.domElem, BEMHTML.apply(listBlocks));
     },
     setCurrent: function(item) {
-        console.log(item);
+        this.setMod(item, 'opened', 'true');
     }
 
 }, {
