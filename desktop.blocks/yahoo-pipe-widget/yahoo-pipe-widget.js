@@ -94,14 +94,26 @@ BEM.DOM.decl('yahoo-pipe-widget', {
             }
         });
         BEM.DOM.append(this.domElem, BEMHTML.apply(listBlocks));
+    },
+    setCurrent: function(item) {
+        console.log(item);
     }
 
 }, {
 
-    /**
-     * With no "live" section in the static methods
-     * all the components are inited on domReady
-     */
+    live: function() {
+
+        this.liveBindTo('item', 'click', function(e){
+            this.setCurrent(e.data.domElem);
+        });
+
+        /**
+        * With returning "false" in "live" section in the
+        * static methods all the components are inited on domReady
+        */
+        return false;
+    }
+
 
 });
 
