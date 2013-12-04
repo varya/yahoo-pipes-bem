@@ -1,5 +1,7 @@
 # Yahoo pipe widget
 
+http://varya.me/yahoo-pipes-bem/desktop.bundles/index/index.html
+
 ## Application idea
 
 ### A piece of theory
