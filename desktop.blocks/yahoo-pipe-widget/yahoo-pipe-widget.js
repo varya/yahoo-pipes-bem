@@ -64,6 +64,9 @@ BEM.DOM.decl('yahoo-pipe-widget', {
                             });
                         }
                         this.createList(list);
+                    },
+                    function() {
+                        this.setMod('status', 'error');
                     }
                 )
 

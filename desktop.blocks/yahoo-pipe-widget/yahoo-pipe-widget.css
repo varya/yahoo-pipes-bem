@@ -17,6 +17,7 @@
 {
     display: inline-block;
 }
+
 .yahoo-pipe-widget__loader
 {
     display: none;
@@ -55,6 +56,19 @@
 @-webkit-keyframes growDot {
   0% { -webkit-transform: scale(0); z-index: 5; }
   100% { -webkit-transform: scale(1); z-index: 2; }
+}
+
+.yahoo-pipe-widget__error
+{
+    display: none;
+    font-weight: 700;
+    color: red;
+    padding: 1em;
+}
+
+.yahoo-pipe-widget_status_error .yahoo-pipe-widget__error
+{
+    display: block;
 }
 
 .yahoo-pipe-widget__item
