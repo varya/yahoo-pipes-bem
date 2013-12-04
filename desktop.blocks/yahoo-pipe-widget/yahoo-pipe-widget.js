@@ -94,7 +94,11 @@ BEM.DOM.decl('yahoo-pipe-widget', {
         BEM.DOM.append(this.domElem, BEMHTML.apply(listBlocks));
     },
     setCurrent: function(item) {
+        if (this._currentItem) {
+            this.delMod(this._currentItem, 'opened', 'true');
+        }
         this.setMod(item, 'opened', 'true');
+        this._currentItem = item;
     }
 
 }, {
