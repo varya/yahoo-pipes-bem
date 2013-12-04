@@ -12,6 +12,7 @@
 {
     border-bottom: 1px solid #ccc;
     padding: 0.5em;
+    cursor: pointer;
 }
 
 .yahoo-pipe-widget__item:last-child
@@ -33,6 +34,8 @@
 .yahoo-pipe-widget__desc
 {
     display: none;
+    position: relative;
+    padding-bottom: 3em;
 }
 
 .yahoo-pipe-widget__item_opened_true
@@ -42,7 +45,10 @@
 
 .yahoo-pipe-widget__link
 {
-    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: inline-block;
     background: green;
     color: #FFF;
     background-color: #a9db80;
