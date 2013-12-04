@@ -1,7 +1,6 @@
 ({
     block: 'b-page',
-    title: 'Title of the page',
-    favicon: '/favicon.ico',
+    title: 'Yahoo pipe widget',
     head: [
         { elem: 'css', url: '_index.css', ie: false },
         { elem: 'css', url: '_index.ie.css', ie: 'gte IE 6' },
