@@ -20,14 +20,20 @@ block yahoo-pipe-widget {
 
     elem pic {
 
-
-
         tag: '',
         tag, this.ctx.url: 'img'
         attrs: {
             src: this.ctx.url,
             border: 0
         }
+    }
+
+    elem link {
+        tag: 'a',
+        attrs: {
+            href: this.ctx.url
+        },
+        content: 'full version'
     }
 
 }
