@@ -6,6 +6,17 @@ block yahoo-pipe-widget {
         pipeId: this.ctx.pipeId
     }
 
+    content: {
+        elem: 'loader',
+        content: [
+            { elem: 'loader-i' },
+            { elem: 'loader-i' },
+            { elem: 'loader-i' }
+        ]
+    }
+
+    elem 'loader-i', tag: 'span'
+
     elem item {
 
         tag: 'li'

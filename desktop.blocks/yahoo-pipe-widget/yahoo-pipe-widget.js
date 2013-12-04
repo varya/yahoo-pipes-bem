@@ -51,6 +51,7 @@ BEM.DOM.decl('yahoo-pipe-widget', {
                         _render: 'json'
                     },
                     function(data) {
+                        this.setMod('status', 'loaded');
                         var list = [],
                             items = data.value.items;
                         for (var i=0;i<10;i++){
@@ -65,6 +66,11 @@ BEM.DOM.decl('yahoo-pipe-widget', {
                         this.createList(list);
                     }
                 )
+
+                /**
+                 * Change status after the request is sent
+                 */
+                this.setMod('status', 'loading');
             }
         }
     },
