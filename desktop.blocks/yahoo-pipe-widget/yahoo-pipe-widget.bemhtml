@@ -18,4 +18,12 @@ block yahoo-pipe-widget {
 
     }
 
+    elem pic {
+        tag: 'img',
+        attrs: {
+            src: this.ctx.url,
+            border: 0
+        }
+    }
+
 }
