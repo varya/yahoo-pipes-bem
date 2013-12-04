@@ -19,7 +19,11 @@ block yahoo-pipe-widget {
     }
 
     elem pic {
-        tag: 'img',
+
+
+
+        tag: '',
+        tag, this.ctx.url: 'img'
         attrs: {
             src: this.ctx.url,
             border: 0
