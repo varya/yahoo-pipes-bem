@@ -7,17 +7,22 @@
     list-style-type: none;
     margin: 0;
     padding: 0;
-    text-align: center;
+    border: 1px solid #ccc;
 }
 
 .yahoo-pipe-widget_status_loading
 {
-    border: 1px solid #ccc;
+    text-align: center;
+}
+
+.yahoo-pipe-widget_status_loading .yahoo-pipe-widget__loader
+{
+    display: inline-block;
 }
 
 .yahoo-pipe-widget__loader
 {
-    display: inline-block;
+    display: none;
     border-radius: 50%;
     width: 100px;
     height: 100px;
@@ -55,6 +60,19 @@
   100% { -webkit-transform: scale(1); z-index: 2; }
 }
 
+.yahoo-pipe-widget__error
+{
+    display: none;
+    font-weight: 700;
+    color: red;
+    padding: 1em;
+}
+
+.yahoo-pipe-widget_status_error .yahoo-pipe-widget__error
+{
+    display: block;
+}
+
 .yahoo-pipe-widget__item
 {
     border-bottom: 1px solid #ccc;
@@ -83,6 +101,11 @@
     display: none;
     position: relative;
     padding-bottom: 3em;
+}
+
+.yahoo-pipe-widget__desc img
+{
+    margin: 0 0.5em 0;
 }
 
 .yahoo-pipe-widget__item_opened_true
