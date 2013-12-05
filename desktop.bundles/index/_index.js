@@ -3549,9 +3549,17 @@ BEM.DOM.decl('yahoo-pipe-widget', {
                 });
                 this._dataProvider.get(
                     {
+                        /**
+                         * There is no limit (parameter), which
+                         * makes to use loop below. If limitation is possible,
+                         * it should be placed here.
+                         */
                         _id : this.params.pipeId,
                         _render: 'json'
                     },
+                    /**
+                     * Callback to run in cause of success
+                     */
                     function(data) {
                         /**
                          * Change widget status when data is loaded
@@ -3580,6 +3588,9 @@ BEM.DOM.decl('yahoo-pipe-widget', {
 
                         this.createList(list);
                     },
+                    /**
+                     * Callback to run in case of error
+                     */
                     function() {
                         /**
                          * Change widget status in case of error
