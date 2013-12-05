@@ -101,6 +101,11 @@
     padding-bottom: 3em;
 }
 
+.yahoo-pipe-widget__desc img
+{
+    margin: 0 0.5em 0;
+}
+
 .yahoo-pipe-widget__item_opened_true
 .yahoo-pipe-widget__desc {
     display: block;
